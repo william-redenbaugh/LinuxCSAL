@@ -1,7 +1,6 @@
 #include "pthread.h"
-#include "os_mutx.h"
 #include "time.h"
-#include "os_error.h"
+#include "global_includes.h"
 
 int os_mut_init(os_mut_t *mut){
     if(mut == NULL)

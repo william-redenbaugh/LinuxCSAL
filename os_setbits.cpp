@@ -1,5 +1,6 @@
-#include "os_setbits.h"
+#include "global_includes.h"
 #include "semaphore.h"
+
 int os_setbits_init(os_setbits_t *mod){
     mod->bits = 0x00000000;
     sem_init(&mod->bit_sem, 0, 0);
@@ -63,7 +64,7 @@ int os_waitbits(os_setbits_t *mod, uint8_t bit, uint32_t timeout_ms){
     return OS_RET_OK;
 }
 
-int os_waitbits_indefinite(os_setbits_t *mod, uint8_t bit, uint32_t timeout_ms){
+int os_waitbits_indefinite(os_setbits_t *mod, uint8_t bit){
     if(bit >= 32)
         return OS_RET_INVALID_PARAM;
     

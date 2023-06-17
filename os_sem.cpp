@@ -1,5 +1,4 @@
-#include "os_sem.h"
-#include "os_error.h"
+#include "global_includes.h"
 
 int os_sem_init(os_sem_t *sem, int count){
     if(sem == NULL){
