@@ -3,7 +3,10 @@
 
 #include "stdint.h"
 #include "stdbool.h"
+#include "time.h"
 #include "pthread.h"
+#include "unistd.h"
+#include "stdio.h"
 
 /*!
 * @brief  Thread id value
