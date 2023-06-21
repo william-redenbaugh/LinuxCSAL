@@ -1,7 +1,6 @@
 #ifndef _CSAL_STRUCT_DEFINITIONS_H
 #define _CSAL_STRUCT_DEFINITIONS_H
 
-
 #include "pthread.h"
 #include "semaphore.h"
 #include "stdint.h"

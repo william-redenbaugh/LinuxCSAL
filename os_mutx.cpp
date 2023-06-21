@@ -54,4 +54,5 @@ int os_mut_exit(os_mut_t *mut){
 
 int os_mut_deinit(os_mut_t * mut){
 
+    return OS_RET_OK;
 }
