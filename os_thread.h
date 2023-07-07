@@ -8,6 +8,10 @@
 #include "unistd.h"
 #include "stdio.h"
 
+#include <stdint.h>
+#include <stdio.h>
+#include <time.h>
+
 /*!
 * @brief  Thread id value
 * @note
@@ -86,4 +90,10 @@ void os_kill_self_thread(void);
 *   @note Call's hypervisor command to look into something else.
 */
 #define _os_yield() pthread_yield()
+
+/**
+ * @returns the current time in milliseconds
+*/
+uint64_t get_current_time_millis();
+
 #endif
