@@ -75,7 +75,7 @@ void os_kill_self_thread(void);
 * @param int milliseconds since last system tick
 * @returns none
 */
-#define os_thread_sleep_ms(millisecond) usleep(1000000 * millisecond)
+#define os_thread_sleep_ms(millisecond) usleep(1000 * millisecond)
 
 /*!
 * @brief Sleeps the thread through a hypervisor call.
