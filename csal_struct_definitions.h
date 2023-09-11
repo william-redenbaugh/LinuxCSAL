@@ -5,24 +5,33 @@
 #include "semaphore.h"
 #include "stdint.h"
 #include "stdbool.h"
-#include "semaphore.h"
 
-typedef struct os_setbits_t{
-    //OSSignal signal;
+typedef struct os_setbits_t
+{
+    // OSSignal signal;
     volatile int bits;
     sem_t bit_sem;
     volatile bool sem_wait;
-}os_setbits_t;
+} os_setbits_t;
 
-typedef struct os_mut_t{
-    pthread_mutex_t mutex;    
-}os_mut_t;
+typedef struct os_mut_t
+{
+    pthread_mutex_t mutex;
+} os_mut_t;
 
-typedef struct os_sem_t{
+typedef struct os_sem_t
+{
     sem_t sem;
-}os_sem_t;
+} os_sem_t;
 
-typedef struct os_thread_id_s{
-    
-}os_thread_id_s;
+typedef struct os_thread_id_s
+{
+
+} os_thread_id_s;
+
+typedef void (*os_timer_cb_t)(void *params);
+typedef struct os_timer_t
+{
+    int n;
+} os_timer_t;
 #endif
