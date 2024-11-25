@@ -90,3 +90,10 @@ int os_waitbits_indefinite(os_setbits_t *mod, int bit)
 
     return OS_RET_OK;
 }
+
+int os_setbits_deconstruct(os_setbits_t *mod){
+   sem_close(&mod->bit_sem);
+   mod->bits = 0;
+
+   return OS_RET_OK;
+}

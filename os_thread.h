@@ -96,4 +96,9 @@ void os_kill_self_thread(void);
 */
 uint64_t get_current_time_millis();
 
+/**
+ * @returns whether or not two threads are the same thread
+ */
+#define os_cmp_id(thread_one_id, thread_two_id) pthread_equal(thread_one_id, thread_two_id)
+
 #endif
